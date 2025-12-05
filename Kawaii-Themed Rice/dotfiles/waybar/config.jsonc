@@ -1,0 +1,147 @@
+{
+    // General settings
+    "layer": "bottom", // Defines whether the bar will overlap windows or not
+    "spacing": 1,      // Defines spaces between modules
+    "height": 40,
+    "position": "top",
+    "margin-top": 0,   // Defines whether the bar will float
+    "margin-right": 0,
+    "margin-left": 0,
+
+    // Module positions
+    "modules-left": ["custom/applauncher", "hyprland/workspaces"],
+    "modules-center": ["custom/star", "clock", "custom/star"],
+    "modules-right": ["pulseaudio", "network", "bluetooth", "custom/heartbeat", "battery", "custom/poweroff"],
+
+    // --------------------------------- Left modules ---------------------------------
+
+    "custom/applauncher": {
+        "format": "󰄛", // Text format
+        "tooltip-format": "<i>Launch to start applications</i>",                                 // Module description
+        "on-click": "pgrep rofi >/dev/null 2>&1 && killall rofi || rofi -show drun -location 1", // Command to execute
+        "on-click-right": "play -q $(shuf -n1 -e ~/.local/share/sounds/meow*.mp3)"               // Command to execute when right-clicking
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}", // Set custom icons
+        "format-icons": {
+            "default": "󰋕", // Inactive workspaces
+            "active": "󰋑"   // Active workspace
+        }
+    },
+
+    // -------------------------------- Center modules --------------------------------
+
+    "clock": {
+        "format": "{:%H:%M}",                // 24-hour clock
+        "format-alt": "<i>{:%A, %B %d}</i>", // Day of the week
+        "tooltip-format": "{calendar}",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months": "<span color='#ffffff'><b><i>{}</i></b></span>", // Month format
+                "days": "<span color='#a8c5da'>{}</span>",                 // Day format
+                "weekdays": "<span color='#c75583'><b>{}</b></span>",      // Weekday format
+                "today": "<span color='#c75583'><b>{}</b></span>"          // Today format
+            }
+        },
+        "actions": {
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+
+    // -------------------------------- Right modules ---------------------------------
+
+    // Shows audio capture, screen sharing, or audio playing
+    "privacy": {
+        "icon-spacing": 5,
+        "icon-size": 15,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ]
+    },
+
+    // Volume mixer
+    "pulseaudio": {
+        "format": "{icon} ",
+        "format-muted": "󰝟 ",
+        "format-bluetooth": "󰥰 ",
+        "format-icons": ["", "", ""], // Volume levels icons
+        "tooltip-format": "{icon}  <b><i>Volume</i>:</b> <span color='#a8c5da'>{volume}%</span>",
+        "on-click": "pavucontrol",       // Audio manager tool
+        "max-volume": 100,               // Maximum volume in percentage
+        "scroll-step": 1.5               // Scroll speed when changing volume
+    },
+
+    "network": {
+        "format-ethernet": "󰈀 ",
+        "format-wifi": "{icon} ",
+        "format-disconnected": "󰤮ㅤNo Network",
+        "format-icons": ["󰤟", "󰤢", "󰤥"], // Wifi strength icons
+        "tooltip-format": "  <b><i>Network</i>:</b> <span color='#a8c5da'>{essid}</span>\n󰈀  <b><i>Interface</i>:</b> <span color='#a8c5da'>{ifname}</span>\n  <b><i>Download</i>:</b> <span color='#a8c5da'>{bandwidthDownBytes}</span>\n  <b><i>Upload</i>:</b> <span color='#a8c5da'>{bandwidthUpBytes}</span>\n󰩟  <b><i>IP</i>:</b> <span color='#a8c5da'>{ipaddr}</span>",
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 10 // Time to sync
+    },
+
+    "bluetooth": {
+        "format": "󰂯 ",
+        "format-off": "󰂲 ",
+        "format-disabled": "󰂲 ",
+        "format-connected": "󰂯ㅤConnected",
+        "tooltip-format": "󰂯  Status: {status}\n  Alias: {controller_alias}\n  Address: {controller_address}",
+        "tooltip-format-connected": "󰂯  Status: {status}\n  Alias: {controller_alias}\n  Address: {controller_address}\n󰾰  Devices: {device_enumerate}",
+        "tooltip-format-enumerate-connected": "󰂯  Status: {status}\n  Device: {device_alias} | {device_address}",
+        "on-click": "[[ $(bluetoothctl show | awk -F': ' '/PowerState/ {print $2}') == 'off' ]] && bluetoothctl power on &>/dev/null || bluetoothctl power off &>/dev/null"
+    },
+
+    // System monitor -> Desenvolver script para monitorar o sistema!
+    "custom/heartbeat": {
+        "format": " ",
+        "tooltip-format": "  <b><i>CPU usage</i>:</b> <span color='#a8c5da'>15%</span>\n  <b><i>RAM usage</i>:</b> <span color='#a8c5da'>32%</span>\n  <b><i>Disk usage</i>:</b> <span color='#a8c5da'>4%</span>\n  <b><i>Brightness</i>:</b> <span color='#a8c5da'>100%</span>"
+    },
+
+    "battery": {
+        "format": "{icon} ",
+        "format-full": "󱈑 ",
+        "format-plugged": "󰂄 ",
+        "format-charging": "󰂄 ",
+        "format-icons": ["󱟩", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󱈑"], // Battery states icons
+        "tooltip-format": "󱐋  <b><i>Capacity</i>:</b> <span color='#a8c5da'>{capacity}%</span>\n  <b><i>Time</i>:</b> <span color='#a8c5da'>{time}</span>",
+        "tooltip-format-plugged": "󱐋  <b><i>Capacity</i>:</b> <span color='#a8c5da'>{capacity}%</span> (<span color='#00e636'></span>)\n  <b><i>Time</i>:</b> <span color='#a8c5da'>Fully charged!</span>",
+        "tooltip-format-charging": "󱐋  <b><i>Capacity</i>:</b> <span color='#a8c5da'>{capacity}%</span> (<span color='#ffe600'>󱐋</span>)\n  <b><i>Time to 100%</i>:</b> <span color='#a8c5da'>{time}</span>",
+        "states": { // Defining battery states
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        }
+    },
+
+    "custom/poweroff": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "pgrep wlogout >/dev/null 2>&1 && killall wlogout || wlogout" // Wayland logout menu
+    },
+
+    // Star separator
+    "custom/star": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "play -q ~/.local/share/sounds/magic.mp3" // Sparkles sound
+    }
+}
