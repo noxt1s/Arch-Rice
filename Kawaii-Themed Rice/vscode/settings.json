@@ -1,0 +1,33 @@
+{
+    "editor.fontFamily": "Cascadia Code",
+    "terminal.integrated.fontFamily": "Cascadia Code PL",
+    "editor.fontLigatures": "'calt', 'ss01'",
+    "workbench.colorTheme": "5412c41d-f76b-4488-85a7-1ae1a63bbfcc",
+    "extensions.allowed": "*",
+
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment",
+                    "keyword",
+                    "storage",
+                    "entity.name",
+                    "entity.name.type",
+                    "entity.name.function",
+                    "variable",
+                    "variable.language",
+                    "variable.parameter",
+                    "string",
+                    "constant",
+                    "markup",
+                    "meta.function-call",
+                    "support.function"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    }
+}
