@@ -33,7 +33,7 @@ esac
 
 # verificar se aplicacoes estao instaladas (rofi, kitty etc)
 # verificar se diretorios existem, se nao, cria-los
-# mover dotfiles para seus respectivos diretorios
+# mover dotfiles para seus respectivos diretorios (incluindo imagens dentro de resources)
 # pensar em melhorias para o script, incluindo manual de ajuda
 # anotar todas as dependencias que esse script precisara para funcionar (ex: awk..)
 
