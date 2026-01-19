@@ -3,7 +3,7 @@
   "logo": {
     "width": 37,
     "type": "kitty-direct",
-    "source": "./../../../Resources/Images/Fastfetch/nyarch-ping.png"
+    "source": "~/.config/fastfetch/nyarch-ping.png"
   },
   "display": {
     "color": {
