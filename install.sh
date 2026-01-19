@@ -14,7 +14,6 @@ redCode="\x1B[31m"    # Error output color
 boldCode="\x1B[1m"
 resetCode="\x1B[0m"
 
-# User interaction
 printf "${mainColor}${boldCode}Rice to be installed:${resetCode}\n${mainColor}1)${resetCode} Kawaii Theme\n${mainColor}2)${resetCode} Lain Theme\n${mainColor}3)${resetCode} Cyan Theme\n${mainColor}▶${resetCode} " && read option
 
 # Defining the chosen rice
@@ -22,8 +21,12 @@ case "$option" in
     1) riceRoot="Kawaii-Themed-Rice" ;;
     2) riceRoot="Lain-Themed-Rice" ;;
     3) riceRoot="Cyan-Themed-Rice" ;;
-    *) printf "Help Guide\n" && exit 0 ;;
+    *) printf "Help Guide\n" && exit 1 ;;
 esac
+
+# Message functions
+successMsg() { printf "\n${greenCode}▶ %s${resetCode}\n" "$1"; }
+errorMsg() { printf "\n${redCode}▶ %s${resetCode}\n" "$1"; exit 1; }
 
 ###########################
 #                         #
@@ -31,29 +34,47 @@ esac
 #                         #
 ###########################
 
-# verificar se aplicacoes estao instaladas (rofi, kitty etc)
-# verificar se diretorios existem, se nao, cria-los
-# mover dotfiles para seus respectivos diretorios (incluindo imagens dentro de resources)
-# pensar em melhorias para o script, incluindo manual de ajuda
-# anotar todas as dependencias que esse script precisara para funcionar (ex: awk..)
-
 # Defining the configuration file
 setupFile="./$riceRoot/setup.conf"
 
-[[ -f "$setupFile" ]] || {
-    printf "\n${redCode}▶ Configuration file not found.${resetCode} Install it \e]8;;https://github.com/noxt1s/Linux-Rice/blob/main/$riceRoot/setup.conf\ahere\e]8;;\a.\n"
+# Checking if the configuration file exists or not
+[[ -f "$setupFile" ]] && source "$setupFile" || {
+    printf "\n${redCode}▶ Configuration file “$setupFile” not found.${resetCode} Install the configuration file \e]8;;https://github.com/noxt1s/Linux-Rice/blob/main/$riceRoot/setup.conf\ahere\e]8;;\a.\n"
     exit 1
 }
 
-# Variable definitions
-while IFS='=' read -r name value; do
-    varName=$(echo "$name" | xargs)
-    varValue=$(echo "$value" | xargs)
-    declare "$varName=$varValue"
-    export "$varName"
-done < "$setupFile"
+printf "\n${mainColor}▶ Installing $riceRoot...${resetCode}"
 
-printf "\n${mainColor}▶ Installing $riceRoot...${resetCode}\n"
+# Creating necessary directories
+for dir in \
+    ~/.local/share/fonts \
+    ~/.local/share/sounds \
+    ~/.config/hypr \
+    ~/.config/waybar \
+    ~/.config/kitty \
+    ~/.config/fastfetch \
+    ~/.config/rofi \
+    ~/.config/Code/User \
+    ~/.config/Vencord/themes \
+    ~/Pictures/Wallpapers
+do
+    mkdir -p "$dir" || errorMsg "Failed to create directory “$dir”."
+done
+
+# Installing system font
+if [[ -f "$mainFont" ]]; then
+    unzip -o "$mainFont" -d "${mainFont%.zip}"
+    mv "${mainFont%.zip}" ~/.local/share/fonts
+    fc-cache -f -v
+    successMsg "Font file “$mainFont” installed successfully."
+else
+    errorMsg "Font file “$mainFont” not found."
+fi
+
+# Installing wallpaper
+[[ -f "$wallpaper" ]] && mv "$wallpaper" ~/Pictures/Wallpapers || errorMsg "Wallpaper “$wallpaper” not found."
+
+
 
 
 
@@ -63,20 +84,7 @@ printf "\n${mainColor}▶ Installing $riceRoot...${resetCode}\n"
 #                   #
 #####################
 
-
-##################
-#                #
-#  Ricing Kitty  #
-#                #
-##################
-
-
-######################
-#                    #
-#  Ricing Fastfetch  #
-#                    #
-######################
-
+[[ -d "$hyprRice" ]] && mv "$hyprRice"/* ~/.config/hypr
 
 ###################
 #                 #
@@ -84,6 +92,24 @@ printf "\n${mainColor}▶ Installing $riceRoot...${resetCode}\n"
 #                 #
 ###################
 
+[[ -d "$waybRice" ]] && mv "$waybRice"/* ~/.config/waybar
+
+##################
+#                #
+#  Ricing Kitty  #
+#                #
+##################
+
+[[ -f "$kittyRice" ]] && mv "$kittyRice" ~/.config/kitty
+
+######################
+#                    #
+#  Ricing Fastfetch  #
+#                    #
+######################
+
+[[ -f "$fetchRice" ]] && mv "$fetchRice" ~/.config/fastfetch
+[[ -f "$fetchLogo" ]] && mv "$fetchLogo" ~/.config/fastfetch
 
 #################
 #               #
@@ -91,6 +117,7 @@ printf "\n${mainColor}▶ Installing $riceRoot...${resetCode}\n"
 #               #
 #################
 
+[[ -f "$rofiRice" ]] && mv "$rofiRice" ~/.config/rofi
 
 ###################
 #                 #
@@ -98,9 +125,12 @@ printf "\n${mainColor}▶ Installing $riceRoot...${resetCode}\n"
 #                 #
 ###################
 
+[[ -f "$codeRice" ]] && mv "$codeRice" ~/.config/Code/User
 
 ####################
 #                  #
 #  Ricing Discord  #
 #                  #
 ####################
+
+[[ -f "$discRice" ]] && mv "$discRice" ~/.config/Vencord/themes
