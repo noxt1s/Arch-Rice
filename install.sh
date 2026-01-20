@@ -24,9 +24,15 @@ case "$option" in
     *) printf "Help Guide\n" && exit 1 ;;
 esac
 
-# Message functions
+# Functions
 successMsg() { printf "\n${greenCode}▶ %s${resetCode}\n" "$1"; }
 errorMsg() { printf "\n${redCode}▶ %s${resetCode}\n" "$1"; exit 1; }
+
+applyRice() {
+    if [[ -n "$1" ]]; then
+        [[ -e "$1" ]] && mv "$1" "$2" && successMsg "YAY! “$1” successfully installed on the system!"
+    fi
+}
 
 ###########################
 #                         #
@@ -74,63 +80,19 @@ fi
 # Installing wallpaper
 [[ -f "$wallpaper" ]] && mv "$wallpaper" ~/Pictures/Wallpapers || errorMsg "Wallpaper “$wallpaper” not found."
 
-
-
-
-
-#####################
-#                   #
-#  Ricing Hyprland  #
-#                   #
-#####################
-
-[[ -d "$hyprRice" ]] && mv "$hyprRice"/* ~/.config/hypr
-
 ###################
 #                 #
-#  Ricing Waybar  #
+#  Applying Rice  #
 #                 #
 ###################
 
-[[ -d "$waybRice" ]] && mv "$waybRice"/* ~/.config/waybar
+applyRice "$hyprRice"/* ~/.config/hypr         # Hyprland
+applyRice "$waybRice"/* ~/.config/waybar       # Waybar
+applyRice "$kittyRice" ~/.config/kitty         # Kitty
+applyRice "$fetchRice" ~/.config/fastfetch     # Fastfetch
+applyRice "$fetchLogo" ~/.config/fastfetch
+applyRice "$rofiRice" ~/.config/rofi           # Rofi
+applyRice "$codeRice" ~/.config/Code/User      # VSCode
+applyRice "$discRice" ~/.config/Vencord/themes # Vencord
 
-##################
-#                #
-#  Ricing Kitty  #
-#                #
-##################
-
-[[ -f "$kittyRice" ]] && mv "$kittyRice" ~/.config/kitty
-
-######################
-#                    #
-#  Ricing Fastfetch  #
-#                    #
-######################
-
-[[ -f "$fetchRice" ]] && mv "$fetchRice" ~/.config/fastfetch
-[[ -f "$fetchLogo" ]] && mv "$fetchLogo" ~/.config/fastfetch
-
-#################
-#               #
-#  Ricing Rofi  #
-#               #
-#################
-
-[[ -f "$rofiRice" ]] && mv "$rofiRice" ~/.config/rofi
-
-###################
-#                 #
-#  Ricing VSCode  #
-#                 #
-###################
-
-[[ -f "$codeRice" ]] && mv "$codeRice" ~/.config/Code/User
-
-####################
-#                  #
-#  Ricing Discord  #
-#                  #
-####################
-
-[[ -f "$discRice" ]] && mv "$discRice" ~/.config/Vencord/themes
+printf "\n${mainColor}▶ Rice $riceRoot installed! :)${resetCode}"
