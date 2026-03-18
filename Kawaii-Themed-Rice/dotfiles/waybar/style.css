@@ -8,10 +8,10 @@
 /* Bar background */
 window#waybar {
     color: #ffffff;
-    font-size: 25px;
+    font-size: 20px;
     font-style: italic;
     border-radius: 0 0 10px 10px;
-    background-color: rgba(0, 0, 0, 0.4)
+    background-color: rgba(0, 0, 0, 0.35)
 }
 
 /* Module tooltips */
@@ -26,21 +26,23 @@ tooltip {
 
 /* Cat launcher */
 #custom-applauncher {
-    font-size: 32px;
+    font-size: 30px;
     margin-left: 16px;
-    margin-right: 10px
+    margin-right: 15px
 }
 
 #custom-applauncher:hover {
-    text-shadow: 0 0 7px #ffffff
+    text-shadow: 0 0 5px #ffffff
 }
 
 /* Heart shaped */
 #workspaces button {
-    border: none;
     color: #a8c5da;
+    border: none;
+    font-size: 22px;
     box-shadow: none;
-    text-shadow: 0 0 7px #e22865
+    margin-right: 2px;
+    text-shadow: 0 0 6px #e22865
 }
 
 #workspaces button.active {
@@ -57,10 +59,11 @@ tooltip {
 /* Star separator */
 #custom-star {
     color: #f98bb7;
-    font-size: 23px;
+    font-size: 17px;
     margin-left: 5px;
-    margin-right: 5px;
-    text-shadow: 0 0 10px #e22865
+    margin-right: 12px;
+    margin-bottom: 1px;
+    text-shadow: 0 0 8px #e22865
 }
 
 #clock {
@@ -72,65 +75,68 @@ tooltip {
 
 /* Volume mixer */
 #pulseaudio {
-    font-size: 27.5px
+    margin-right: 14px
 }
 
 #pulseaudio:hover {
-    text-shadow: 0 0 7px #ffffff
+    text-shadow: 0 0 5px #ffffff
 }
 
 #network {
-    font-size: 28px
+    margin-right: 7px
 }
 
 #network:hover {
-    text-shadow: 0 0 7px #ffffff
+    text-shadow: 0 0 5px #ffffff
 }
 
 #bluetooth {
-    font-size: 21px
+    font-size: 23px;
+    margin-left: 7px
 }
 
 #bluetooth:hover {
-    text-shadow: 0 0 7px #ffffff
+    text-shadow: 0 0 5px #ffffff
 }
 
 /* System monitor */
 #custom-heartbeat {
-    font-size: 27px;
-    margin-left: 4px
+    margin-left: 3px;
+    margin-right: 7px
 }
 
 #custom-heartbeat:hover {
-    text-shadow: 0 0 7px #ffffff
+    text-shadow: 0 0 5px #ffffff
 }
 
 #battery {
-    font-size: 21px
+    font-size: 22px;
+    margin-left: 7px;
+    margin-bottom: 2px
 }
 
 /* Good state */
 #battery.good:hover {
-    text-shadow: 0 0 7px #00e636
+    text-shadow: 0 0 6px #00e636
 }
 
 /* Warning state */
 #battery.warning:hover {
-    text-shadow: 0 0 7px #ffe600
+    text-shadow: 0 0 6px #ffe600
 }
 
 /* Critical state */
 #battery.critical:hover {
-    text-shadow: 0 0 7px #e22865
+    text-shadow: 0 0 6px #e22865
 }
 
 #custom-poweroff {
-    font-size: 23px;
+    font-size: 33px;
+    font-style: normal;
     margin-left: 5px;
-    margin-right: 16px;
-    margin-bottom: 0.1px
+    margin-right: 16px
 }
 
 #custom-poweroff:hover {
-    text-shadow: 0 0 7px #ffffff
+    text-shadow: 0 0 5px #ffffff
 }
