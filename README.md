@@ -8,7 +8,7 @@ Repository containing dotfiles I developed from scratch for Arch Linux, as well 
 This rice is inspired by a cute, pink aesthetic, with kittens and stars. The Japanese term <i>kawaii</i> (可愛い) refers to things that are charming, adorable, and cute.
 You can download the dotfiles for this rice [here](https://github.com/noxt1s/Linux-Rice/tree/main/Kawaii-Themed%20Rice).<br>
 
-<img width="1035" height="582" alt="image" src="https://github.com/user-attachments/assets/5639f192-aa9a-42fd-84b1-0da7a69277fb" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/86add78c-a922-4a1a-a43f-efac8ea96fee" />
 
 ### Predominant Colors
 <img width="15" height="15" alt="1" src="https://github.com/user-attachments/assets/7a9b826e-06f3-4e27-b0a9-b597b6e99e7c" />  #f98bb7<br>
