@@ -86,10 +86,12 @@
         "on-click": "[[ $(bluetoothctl show | awk -F': ' '/PowerState/ {print $2}') == 'off' ]] && bluetoothctl power on &>/dev/null || bluetoothctl power off &>/dev/null"
     },
 
-    // System monitor -> Desenvolver script para monitorar o sistema!
     "custom/heartbeat": {
         "format": " ",
-        "tooltip-format": "  <b><i>CPU usage</i>:</b> <span color='#a8c5da'>15%</span>\n  <b><i>RAM usage</i>:</b> <span color='#a8c5da'>32%</span>\n  <b><i>Disk usage</i>:</b> <span color='#a8c5da'>4%</span>\n  <b><i>Brightness</i>:</b> <span color='#a8c5da'>100%</span>"
+        "tooltip": true,
+        "exec": "/home/aelis/.config/waybar/heartbeat.sh",
+        "return-type": "json",
+        "interval": 2
     },
 
     "battery": {
