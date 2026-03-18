@@ -53,30 +53,6 @@
 
     // -------------------------------- Right modules ---------------------------------
 
-    // Shows audio capture, screen sharing, or audio playing
-    "privacy": {
-        "icon-spacing": 5,
-        "icon-size": 15,
-        "transition-duration": 250,
-        "modules": [
-            {
-                "type": "screenshare",
-                "tooltip": true,
-                "tooltip-icon-size": 24
-            },
-            {
-                "type": "audio-out",
-                "tooltip": true,
-                "tooltip-icon-size": 24
-            },
-            {
-                "type": "audio-in",
-                "tooltip": true,
-                "tooltip-icon-size": 24
-            }
-        ]
-    },
-
     // Volume mixer
     "pulseaudio": {
         "format": "{icon} ",
