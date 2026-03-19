@@ -89,7 +89,7 @@
     "custom/heartbeat": {
         "format": " ",
         "tooltip": true,
-        "exec": "/home/aelis/.config/waybar/heartbeat.sh",
+        "exec": "~/.config/waybar/heartbeat.sh",
         "return-type": "json",
         "interval": 2
     },
