@@ -1,29 +1,114 @@
 * {
     font: "Maple Mono Italic 11.5";
 
-    foreground-color: #ffffff;
-    alt-foreground-color: #a8c5dacc;
+    fg-main-color: #ffffff;
+    fg-alt-color: #a8c5dacc;              /* "Search Apps" text color */
 
-    background-color: #00000059;
-    alt-background-color: #00000033;
+    bg-main-color: #00000059;
+    bg-alt-color: #00000033;
 
     fg-highlight-color: #f98bb7;
     bg-highlight-color: #f98bb730;
 
-    content-spacing: 15px; /* Spacing between names and icons */
+    content-spacing: 15px;                /* Spacing between names and icons */
     content-padding: 8px;
-    content-margin: 1px;   /* Window margin */
+    content-margin: 1px;
 
-    windows-border: 2px solid;
-    windows-border-color: #c75583;
-    windows-padding: 8px;
+    window-border: 2px solid;
+    window-border-color: #c75583;
+    window-padding: 8px;
 
-    border-radius: 15px;
+    bd-radius: 15px;                      /* Border radius */
+    bd-color: #000000;                    /* Border color */
 }
 
 configuration {
-    location: 1;          /* Screen location */
-    mode: "drun";         /* Display mode */
-    display-drun: " ";  /* Search icon */
+    location: 1;                          /* On-screen location */
+    mode: "drun";                         /* Display mode */
+    display-drun: " ";                  /* Search icon */
     show-icons: true;
+}
+
+mainbox {
+    spacing: @content-spacing;
+    padding: @content-padding;
+    margin: @content-margin;
+    children: ["inputbar", "listview", "message"];
+}
+
+message {
+    background-color: red;                /* Rofi warning messages */
+}
+
+window {
+    width: 400px;                         /* Window width */
+    transparency: "real";
+    background-color: @bg-main-color;
+    border: @window-border;
+    border-radius: @bd-radius;
+    border-color: @window-border-color;
+    padding: @window-padding;
+}
+
+inputbar {
+    spacing: @content-spacing;
+    children: ["prompt", "entry"];        /* Input bar content */
+}
+
+prompt {
+    text-color: @fg-main-color;
+}
+
+entry {
+    text-color: @fg-main-color;
+    placeholder: "Search for Applications";
+    placeholder-color: @fg-alt-color;
+}
+
+listview {
+    columns: 1;
+    lines: 8;
+    border: 0px;                          /* Removes the dashed line */
+    cycle: true;
+    scrollbar: true;
+    fixed-height: true;
+    fixed-columns: true;
+}
+
+scrollbar {
+    handle-width: 8px;
+    handle-color: @window-border-color;   /* Scrollbar handle color */
+    handle-rounded-corners: true;
+}
+
+element {
+    text-color: @fg-main-color;
+    background-color: transparent;
+    border: 0px solid;
+    border-radius: @bd-radius;
+    border-color: @bd-color;
+    spacing: @content-spacing;
+    padding: @content-padding;
+    margin: @content-margin;
+
+}
+
+element normal.normal {
+    text-color: @fg-main-color;
+	background-color: transparent;
+}
+
+element alternate.normal {
+    text-color: @fg-main-color;
+	background-color: @bg-alt-color;
+}
+
+element selected.active {
+	text-color: @fg-highlight-color;
+    background-color: @bg-highlight-color;
+}
+
+element selected.normal {
+    text-color: @fg-highlight-color;
+	background-color: @bg-highlight-color;
 }
