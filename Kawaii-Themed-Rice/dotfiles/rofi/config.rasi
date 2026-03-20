@@ -1,29 +1,29 @@
 * {
-    font: "Maple Mono Italic 11.5";   /* General text */
-    fg-color: #ffffff;                /* Foreground color of elements */
-    fgp-color: #a8c5dacc;             /* "Search Apps" text color */
+    font: "Maple Mono Italic 11.5";
 
-    hl-color: #f98bb730;              /* Background color of the highlighted element */
-    hlt-color: #f98bb7;               /* Foreground color of the highlighted element */
+    foreground-color: #ffffff;
+    alt-foreground-color: #a8c5dacc;
 
-    alt-color: #00000033;             /* Background color of elements */
-    wbg-color: #00000059;             /* Background alt color of elements */
+    background-color: #00000059;
+    alt-background-color: #00000033;
 
-    g-spacing: 15px;                  /* Spacing between names and icons */
-    g-padding: 8px;
-    g-margin: 1px;                    /* Window margin */
+    fg-highlight-color: #f98bb7;
+    bg-highlight-color: #f98bb730;
 
-    w-border-color: #c75583;          /* Window border color */
-    w-border: 2px solid;              /* Window border size */
-    w-padding: 8px;
+    content-spacing: 15px; /* Spacing between names and icons */
+    content-padding: 8px;
+    content-margin: 1px;   /* Window margin */
 
-    b-color: #000000;                 /* Border color */
-    b-radius: 15px;                   /* Border radius */
+    windows-border: 2px solid;
+    windows-border-color: #c75583;
+    windows-padding: 8px;
+
+    border-radius: 15px;
 }
 
 configuration {
-    mode: "drun";                     /* Display mode */
-    show-icons: true;                 /* Show element icons */
-    display-drun: " ";              /* Search icon */
-    location: 1;                      /* Screen location */
+    location: 1;          /* Screen location */
+    mode: "drun";         /* Display mode */
+    display-drun: " ";  /* Search icon */
+    show-icons: true;
 }
