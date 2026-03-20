@@ -25,5 +25,5 @@ configuration {
     mode: "drun";                     /* Display mode */
     show-icons: true;                 /* Show element icons */
     display-drun: " ";              /* Search icon */
-    location:1;                       /* Screen location */
+    location: 1;                      /* Screen location */
 }
