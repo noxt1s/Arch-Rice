@@ -41,7 +41,7 @@ message {
 }
 
 window {
-    width: 400px;                         /* Window width */
+    width: 380px;                         /* Window width */
     transparency: "real";
     background-color: @bg-main-color;
     border: @window-border;
