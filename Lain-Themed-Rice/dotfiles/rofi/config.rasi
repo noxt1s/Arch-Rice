@@ -2,30 +2,30 @@
     font: "Maple Mono Italic 11.5";
 
     fg-main-color: #ffffff;
-    fg-alt-color: #a8c5dacc;              /* "Search Apps" text color */
+    fg-alt-color: #c0c0d4cc;            /* "Search Apps" text color */
 
-    bg-main-color: #00000059;
-    bg-alt-color: #00000033;
+    bg-main-color: #00000080;
+    bg-alt-color: #00000045;
 
-    fg-highlight-color: #f98bb7;
-    bg-highlight-color: #f98bb730;
+    fg-highlight-color: #35b69d;
+    bg-highlight-color: #162645bb;
 
     content-spacing: 15px;                /* Spacing between names and icons */
     content-padding: 8px;
     content-margin: 1px;
 
     window-border: 2px solid;
-    window-border-color: #c75583;
+    window-border-color: #196052;
     window-padding: 8px;
 
     bd-radius: 15px;                      /* Border radius */
-    bd-color: #000000;                    /* Border color */
+    bd-color: #000000;                  /* Border color */
 }
 
 configuration {
     location: 1;                          /* On-screen location */
     mode: "drun";                         /* Display mode */
-    display-drun: " ";                  /* Search icon */
+    display-drun: " ";                   /* Search icon */
     show-icons: true;
 }
 
@@ -41,7 +41,7 @@ message {
 }
 
 window {
-    width: 380px;                         /* Window width */
+    width: 400px;                         /* Window width */
     transparency: "real";
     background-color: @bg-main-color;
     border: @window-border;
