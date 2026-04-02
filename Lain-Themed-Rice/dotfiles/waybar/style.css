@@ -1,0 +1,145 @@
+/* General settings */
+* {
+    border-radius: 15px;
+    font-family: "Maple Mono";
+    transition: text-shadow 0.3s ease-in-out
+}
+
+/* Bar background */
+window#waybar {
+    color: #ffffff;
+    font-size: 20px;
+    font-style: italic;
+    border-radius: 0 0 10px 10px;
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+/* Module tooltips */
+tooltip {
+    font-size: 15px;
+    border-width: 2px;
+    border-color: #196052;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+/* ------------------------ Left modules ------------------------ */
+
+/* CoplandOS logo */
+#custom-app-launcher {
+    background-image: url('/home/user/Pictures/Icons/copland.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 16px;
+    margin-right: 9px;
+    margin-bottom: 3px;
+    padding: 0 10px
+}
+
+/* SEL logo */
+#custom-lain-logo {
+    background-image: url('/home/user/Pictures/Icons/lain-logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 9px;
+    margin-right: 8px;
+    padding: 0 25px
+}
+
+/* Circular workspaces */
+#workspaces button {
+    color: #c0c0d4;
+    border: none;
+    font-size: 13px;
+    box-shadow: none;
+    text-shadow: 0 0 5px #00ffbf
+}
+
+#workspaces button.active {
+    color: #ffffff
+}
+
+#workspaces button:hover {
+    color: #ffffff;
+    background: none
+}
+
+/* ----------------------- Center modules ----------------------- */
+
+#clock {
+    font-family: "Love Letter Typewriter";
+    font-size: 21px;
+    font-style: normal;
+    margin-top: 2px
+}
+
+/* ----------------------- Right modules ------------------------ */
+
+/* Volume mixer */
+#pulseaudio {
+    margin-right: 19px
+}
+
+#pulseaudio:hover {
+    text-shadow: 0 0 5px #ffffff
+}
+
+#network {
+    margin-right: 8px
+}
+
+#network:hover {
+    text-shadow: 0 0 5px #ffffff
+}
+
+#bluetooth {
+    font-size: 23px;
+    margin-left: 10px
+}
+
+#bluetooth:hover {
+    text-shadow: 0 0 5px #ffffff
+}
+
+/* System monitor */
+#custom-heartbeat {
+    margin-left: 7px;
+    margin-right: 10px
+}
+
+#custom-heartbeat:hover {
+    text-shadow: 0 0 5px #ffffff
+}
+
+#battery {
+    font-size: 22px;
+    margin-left: 8px;
+    margin-bottom: 2px
+}
+
+/* Good state */
+#battery.good:hover {
+    text-shadow: 0 0 6px #26ff00
+}
+
+/* Warning state */
+#battery.warning:hover {
+    text-shadow: 0 0 6px #ffdd00
+}
+
+/* Critical state */
+#battery.critical:hover {
+    text-shadow: 0 0 6px #ff0000
+}
+
+#custom-poweroff {
+    font-size: 33px;
+    font-style: normal;
+    margin-left: 8px;
+    margin-right: 16px
+}
+
+#custom-poweroff:hover {
+    text-shadow: 0 0 5px #ffffff
+}
