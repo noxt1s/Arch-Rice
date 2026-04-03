@@ -37,8 +37,8 @@
     // -------------------------------- Center modules --------------------------------
 
     "clock": {
-        "format": "  {:%H:%M}",                                            // 24-hour clock
-        "format-alt": "󰃭  {:%A, %B %d}",                                    // Day of the week
+        "format": "• {:%H:%M} •",                                           // 24-hour clock
+        "format-alt": "• {:%A, %B %d} •",                                   // Day of the week
         "on-click-right": "play -q ~/.local/share/sounds/present-time.mp3", // Command to execute when right-clicking
         "tooltip-format": "{calendar}",
         "calendar": {
