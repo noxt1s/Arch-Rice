@@ -60,9 +60,9 @@
 
     // Volume mixer
     "pulseaudio": {
-        "format": "{icon} ",
-        "format-muted": "󰝟 ",
-        "format-bluetooth": "󰥰 ",
+        "format": "{icon}",
+        "format-muted": "󰝟",
+        "format-bluetooth": "󰥰",
         "format-icons": ["", "", ""], // Volume levels icons
         "tooltip-format": "{icon}  <b><i>Volume</i>:</b> <span color='#c0c0d4'>{volume}%</span>",
         "on-click": "pavucontrol",       // Audio manager tool
@@ -71,8 +71,8 @@
     },
 
     "network": {
-        "format-ethernet": "󰈀 ",
-        "format-wifi": "{icon} ",
+        "format-ethernet": "󰈀",
+        "format-wifi": "{icon}",
         "format-disconnected": "󰤮ㅤNo Network",
         "format-icons": ["󰤟", "󰤢", "󰤥"], // Wifi strength icons
         "tooltip-format": "  <b><i>Network</i>:</b> <span color='#c0c0d4'>{essid}</span>\n󰈀  <b><i>Interface</i>:</b> <span color='#c0c0d4'>{ifname}</span>\n  <b><i>Download</i>:</b> <span color='#c0c0d4'>{bandwidthDownBytes}</span>\n  <b><i>Upload</i>:</b> <span color='#c0c0d4'>{bandwidthUpBytes}</span>\n󰩟  <b><i>IP</i>:</b> <span color='#c0c0d4'>{ipaddr}</span>",
@@ -81,9 +81,9 @@
     },
 
     "bluetooth": {
-        "format": "󰂯 ",
-        "format-off": "󰂲 ",
-        "format-disabled": "󰂲 ",
+        "format": "󰂯",
+        "format-off": "󰂲",
+        "format-disabled": "󰂲",
         "format-connected": "󰂯ㅤConnected",
         "tooltip-format": "󰂯  Status: {status}\n  Alias: {controller_alias}\n  Address: {controller_address}",
         "tooltip-format-connected": "󰂯  Status: {status}\n  Alias: {controller_alias}\n  Address: {controller_address}\n󰾰  Devices: {device_enumerate}",
@@ -92,7 +92,7 @@
     },
 
     "custom/heartbeat": {
-        "format": " ",
+        "format": "",
         "tooltip": true,
         "exec": "~/.config/waybar/heartbeat.sh",
         "return-type": "json",
@@ -100,10 +100,10 @@
     },
 
     "battery": {
-        "format": "{icon} ",
-        "format-full": "󱈑 ",
-        "format-plugged": "󰂄 ",
-        "format-charging": "󰂄 ",
+        "format": "{icon}",
+        "format-full": "󱈑",
+        "format-plugged": "󰂄",
+        "format-charging": "󰂄",
         "format-icons": ["󱟩", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󱈑"], // Battery states icons
         "tooltip-format": "󱐋  <b><i>Capacity</i>:</b> <span color='#c0c0d4'>{capacity}%</span>\n  <b><i>Time</i>:</b> <span color='#c0c0d4'>{time}</span>",
         "tooltip-format-plugged": "󱐋  <b><i>Capacity</i>:</b> <span color='#c0c0d4'>{capacity}%</span> (<span color='#00e636'></span>)\n  <b><i>Time</i>:</b> <span color='#c0c0d4'>Fully charged!</span>",
