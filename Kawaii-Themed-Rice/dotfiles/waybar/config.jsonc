@@ -104,7 +104,7 @@
         "tooltip-format-plugged": "󱐋  <b><i>Capacity</i>:</b> <span color='#a8c5da'>{capacity}%</span> (<span color='#00e636'></span>)\n  <b><i>Time</i>:</b> <span color='#a8c5da'>Fully charged!</span>",
         "tooltip-format-charging": "󱐋  <b><i>Capacity</i>:</b> <span color='#a8c5da'>{capacity}%</span> (<span color='#ffe600'>󱐋</span>)\n  <b><i>Time to 100%</i>:</b> <span color='#a8c5da'>{time}</span>",
         "states": { // Defining battery states
-            "good": 95,
+            "good": 100,
             "warning": 50,
             "critical": 20
         }
