@@ -1,0 +1,34 @@
+{
+    "editor.fontFamily": "Cascadia Code",
+    "terminal.integrated.fontFamily": "Cascadia Code PL",
+    "editor.fontLigatures": "'calt', 'ss01'",
+    "workbench.colorTheme": "b0340303-0a5a-4a20-9b9c-fc8ce9880078",
+    "extensions.allowed": "*",
+
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment",
+                    "keyword",
+                    "storage",
+                    "entity.name",
+                    "entity.name.type",
+                    "entity.name.function",
+                    "variable",
+                    "variable.language",
+                    "variable.parameter",
+                    "string",
+                    "constant",
+                    "markup",
+                    "meta.function-call",
+                    "support.function"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+    "doki.sticker.path": "~/Pictures/Icons/lain-blue-sticker.png"
+}
