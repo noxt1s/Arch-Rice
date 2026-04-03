@@ -3,7 +3,8 @@
   "logo": {
     "width": 29,
     "type": "kitty-direct",
-    "source": "~/Pictures/Fastfetch/lain-poster.png"
+    "source": "~/Pictures/Fastfetch/lain-poster.png",
+    "padding": { "right": 1 }
   },
   "display": {
     "color": {
