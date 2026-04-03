@@ -10,7 +10,7 @@
     fg-highlight-color: #35b69d;
     bg-highlight-color: #162645bb;
 
-    content-spacing: 15px;                /* Spacing between names and icons */
+    content-spacing: 13px;                /* Spacing between names and icons */
     content-padding: 8px;
     content-margin: 1px;
 
