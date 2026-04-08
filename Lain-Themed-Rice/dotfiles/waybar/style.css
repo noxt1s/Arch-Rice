@@ -49,7 +49,7 @@ tooltip {
 /* Circular workspaces */
 #workspaces button {
     color: #c0c0d4;
-    font-size: 24px;
+    font-size: 23px;
     box-shadow: none;
     text-shadow: 0 0 5px #00ffbf
 }
@@ -75,7 +75,7 @@ tooltip {
 
 /* Volume mixer */
 #pulseaudio {
-    font-size: 37px;
+    font-size: 34px;
     margin-right: 9px;
 }
 
@@ -84,103 +84,7 @@ tooltip {
 }
 
 #network {
-    font-size: 39px;
-    font-style: italic;
-    margin-left: 9px;
-    margin-right: 9px;
-}
-
-#network:hover {
-    text-shadow: 0 0 5px #ffffff
-}
-
-#bluetooth {/* General settings */
-* {
-    border-radius: 15px;
-    font-family: "Maple Mono";
-    transition: text-shadow 0.3s ease-in-out
-}
-
-/* Bar background */
-window#waybar {
-    color: #ffffff;
-    border-radius: 0 0 10px 10px;
-    background-color: rgba(0, 0, 0, 0.4)
-}
-
-/* Module tooltips */
-tooltip {
-    font-size: 15px;
-    font-style: italic;
-    border-width: 2px;
-    border-color: #196052;
-    background-color: rgba(0, 0, 0, 0.5)
-}
-
-/* ------------------------ Left modules ------------------------ */
-
-/* CoplandOS logo */
-#custom-app-launcher {
-    background-image: url('/home/aelis/Pictures/Icons/copland-logo.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-left: 16px;
-    margin-right: 8px;
-    margin-bottom: 2px;
-    padding: 0 12px
-}
-
-/* SEL logo */
-#custom-lain-logo {
-    background-image: url('/home/aelis/Pictures/Icons/sel-logo.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 0 25px
-}
-
-/* Circular workspaces */
-#workspaces button {
-    color: #c0c0d4;
-    font-size: 24px;
-    box-shadow: none;
-    text-shadow: 0 0 5px #00ffbf
-}
-
-#workspaces button.active {
-    color: #ffffff
-}
-
-#workspaces button:hover {
-    color: #ffffff;
-    background: none
-}
-
-/* ----------------------- Center modules ----------------------- */
-
-#clock {
-    font-family: "Love Letter Typewriter";
-    font-size: 21px;
-    margin-top: 1px;
-}
-
-/* ----------------------- Right modules ------------------------ */
-
-/* Volume mixer */
-#pulseaudio {
-    font-size: 37px;
-    margin-right: 9px;
-}
-
-#pulseaudio:hover {
-    text-shadow: 0 0 5px #ffffff
-}
-
-#network {
-    font-size: 39px;
+    font-size: 36px;
     font-style: italic;
     margin-left: 9px;
     margin-right: 9px;
@@ -191,7 +95,7 @@ tooltip {
 }
 
 #bluetooth {
-    font-size: 28px;
+    font-size: 25px;
     margin-left: 9px;
     margin-right: 9px;
 }
@@ -202,7 +106,7 @@ tooltip {
 
 /* System monitor */
 #custom-heartbeat {
-    font-size: 36px;
+    font-size: 33px;
     margin-left: 9px;
     margin-right: 9px;
 }
@@ -212,7 +116,7 @@ tooltip {
 }
 
 #battery {
-    font-size: 27px;
+    font-size: 24px;
     margin-left: 9px;
     margin-right: 9px;
 }
@@ -233,57 +137,7 @@ tooltip {
 }
 
 #custom-poweroff {
-    font-size: 29px;
-    margin-left: 9px;
-    margin-right: 16px;
-}
-
-#custom-poweroff:hover {
-    text-shadow: 0 0 5px #ffffff
-}
-    font-size: 28px;
-    margin-left: 9px;
-    margin-right: 9px;
-}
-
-#bluetooth:hover {
-    text-shadow: 0 0 5px #ffffff
-}
-
-/* System monitor */
-#custom-heartbeat {
-    font-size: 36px;
-    margin-left: 9px;
-    margin-right: 9px;
-}
-
-#custom-heartbeat:hover {
-    text-shadow: 0 0 5px #ffffff
-}
-
-#battery {
-    font-size: 27px;
-    margin-left: 9px;
-    margin-right: 9px;
-}
-
-/* Good state */
-#battery.good:hover {
-    text-shadow: 0 0 6px #26ff00
-}
-
-/* Warning state */
-#battery.warning:hover {
-    text-shadow: 0 0 6px #ffdd00
-}
-
-/* Critical state */
-#battery.critical:hover {
-    text-shadow: 0 0 6px #ff0000
-}
-
-#custom-poweroff {
-    font-size: 29px;
+    font-size: 26px;
     margin-left: 9px;
     margin-right: 16px;
 }
