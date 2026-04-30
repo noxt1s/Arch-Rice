@@ -1,9 +1,11 @@
 {
     "editor.fontFamily": "Cascadia Code",
     "terminal.integrated.fontFamily": "Cascadia Code PL",
+    "workbench.colorTheme": "b93ab4ea-ff96-4459-8fa2-0caae5bc7116",
+    "doki.sticker.path": "/home/aelis/Pictures/Icons/lain-bear-sticker.png",
     "editor.fontLigatures": "'calt', 'ss01'",
-    "workbench.colorTheme": "b0340303-0a5a-4a20-9b9c-fc8ce9880078",
     "extensions.allowed": "*",
+    "security.workspace.trust.untrustedFiles": "open",
 
     "editor.tokenColorCustomizations": {
         "textMateRules": [
@@ -29,6 +31,5 @@
                 }
             }
         ]
-    },
-    "doki.sticker.path": "~/Pictures/Icons/lain-blue-sticker.png"
+    }
 }
