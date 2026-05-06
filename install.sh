@@ -14,13 +14,12 @@ redCode="\x1B[31m"    # Error output color
 boldCode="\x1B[1m"
 resetCode="\x1B[0m"
 
-printf "${mainColor}${boldCode}Rice to be installed:${resetCode}\n${mainColor}1)${resetCode} Kawaii Theme\n${mainColor}2)${resetCode} Lain Theme\n${mainColor}3)${resetCode} Cyan Theme\n${mainColor}▶${resetCode} " && read option
+printf "${mainColor}${boldCode}Rice to be installed:${resetCode}\n${mainColor}1)${resetCode} Kawaii Theme\n${mainColor}2)${resetCode} Lain Theme\n${mainColor}3)${resetCode} " && read option
 
 # Defining the chosen rice
 case "$option" in
     1) riceRoot="Kawaii-Themed-Rice" ;;
     2) riceRoot="Lain-Themed-Rice" ;;
-    3) riceRoot="Cyan-Themed-Rice" ;;
     *) printf "Help Guide\n" && exit 1 ;;
 esac
 
@@ -60,6 +59,7 @@ for dir in \
     ~/.config/kitty \
     ~/.config/fastfetch \
     ~/.config/rofi \
+    ~/.config/wlogout \
     ~/.config/Code/User \
     ~/.config/Vencord/themes \
     ~/Pictures/Wallpapers
@@ -86,13 +86,14 @@ fi
 #                 #
 ###################
 
-applyRice "$hyprRice"/* ~/.config/hypr         # Hyprland
-applyRice "$waybRice"/* ~/.config/waybar       # Waybar
-applyRice "$kittyRice" ~/.config/kitty         # Kitty
-applyRice "$fetchRice" ~/.config/fastfetch     # Fastfetch
-applyRice "$fetchLogo" ~/.config/fastfetch
-applyRice "$rofiRice" ~/.config/rofi           # Rofi
-applyRice "$codeRice" ~/.config/Code/User      # VSCode
-applyRice "$discRice" ~/.config/Vencord/themes # Vencord
+applyRice "$hyprRice"/* ~/.config/hypr            # Hyprland
+applyRice "$waybarRice"/* ~/.config/waybar        # Waybar
+applyRice "$kittyRice" ~/.config/kitty            # Kitty
+applyRice "$fastfetchRice" ~/.config/fastfetch    # Fastfetch
+applyRice "$fastfetchLogo" ~/.config/fastfetch
+applyRice "$rofiRice" ~/.config/rofi              # Rofi
+applyRice "$wlogoutRice"/* ~/.config/wlogout      # Wlogout
+applyRice "$vscodeRice" ~/.config/Code/User       # VSCode
+applyRice "$discordRice" ~/.config/Vencord/themes # Vencord
 
 printf "\n${mainColor}▶ Rice $riceRoot installed! :)${resetCode}"
