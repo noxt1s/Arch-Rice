@@ -1,14 +1,14 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "width": 29,
+    "width": 37,
     "type": "kitty-direct",
-    "source": "~/Pictures/Fastfetch/lain-poster.png",
+    "source": "~/Pictures/Fastfetch/lain-neon.png",
     "padding": { "right": 1 }
   },
   "display": {
     "color": {
-      "title": "#88eeb9"
+      "title": "#47E7C8"
     },
     "separator": " "
   },
@@ -16,83 +16,83 @@
     "title",
     "separator",
     {
-      "keyColor": "#76e5be",
-      "key": " 󰣇 Operating System",
+      "keyColor": "#47E7D4",
+      "key": " 󰣇 Operating System »",
       "type": "os"
     },
     {
-      "keyColor": "#6de1bc",
+      "keyColor": "#47E5DA",
       "format": "{pretty-name}",
-      "key": "  Window Manager",
+      "key": "  Window Manager »",
       "type": "wm"
     },
     {
-      "keyColor": "#63d8bb",
+      "keyColor": "#47D4E6",
       "format": "{pretty-name}",
-      "key": "  Terminal",
+      "key": "  Terminal »",
       "type": "terminal"
     },
     {
-      "keyColor": "#5acdb9",
+      "keyColor": "#47CCE7",
       "format": "{pretty-name}",
-      "key": "  Shell",
+      "key": "  Shell »",
       "type": "shell"
     },
     {
-      "keyColor": "#50c4b7",
-      "key": " 󰏗 Packages",
+      "keyColor": "#47ACE7",
+      "key": " 󰏗 Packages »",
       "type": "packages"
     },
     {
-      "keyColor": "#46bca5",
-      "key": " 󱫐 Uptime",
+      "keyColor": "#4C99E8",
+      "key": " 󱫐 Uptime »",
       "type": "uptime"
     },
     {
-      "keyColor": "#3ca4b4",
-      "key": "  Machine",
+      "keyColor": "#4E94E9",
+      "key": "  Hostname »",
       "type": "host"
     },
     {
       "format": "{width}x{height} @ {refresh-rate}hz",
-      "keyColor": "#329cb2",
-      "key": " 󰍹 Monitor",
+      "keyColor": "#508DEA",
+      "key": " 󰍹 Display »",
       "type": "display"
     },
     {
       "format": "{vendor} {name} @ {frequency} [{type}]",
-      "keyColor": "#2892b0",
-      "key": " 󰊴 GPU",
+      "keyColor": "#557BEB",
+      "key": " 󰊴 GPU »",
       "type": "gpu"
     },
     {
       "format": "{name} @ {freq-max}",
-      "keyColor": "#1e88ae",
-      "key": "  CPU",
+      "keyColor": "#5774EC",
+      "key": "  CPU »",
       "type": "cpu"
     },
     {
       "format": "Average {avg} - Max {max}",
-      "keyColor": "#147fab",
-      "key": "  CPU",
+      "keyColor": "#5774EC",
+      "key": "  CPU Usage »",
       "type": "cpuusage"
     },
     {
       "format": "{used} / {total} - {percentage}",
-      "keyColor": "#0a75a9",
-      "key": "  RAM",
+      "keyColor": "#5B66EE",
+      "key": "  RAM »",
       "type": "memory"
     },
     {
       "format": "{size-used} / {size-total} - {size-percentage}",
-      "keyColor": "#007acc",
-      "key": "  Drive",
+      "keyColor": "#5D5FEE",
+      "key": "  Drive »",
       "type": "disk"
     },
     {
       "type": "localip",
-      "key": " 󰩟 Local IP»",
-      "keyColor": "#007acc"
+      "key": " 󰩟 Local IP »",
+      "keyColor": "#624AF0"
     },
     "break"
   ]
