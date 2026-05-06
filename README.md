@@ -22,6 +22,6 @@ You can download the dotfiles for this rice [here](https://github.com/noxt1s/Lin
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cb0b21b5-6b62-4ba8-aeae-936d4b164a2a" />
 
-<img width="512" height="512" alt="3" src="https://github.com/user-attachments/assets/4eeb64d5-b689-44e8-ac35-128bd31ab2db" />
-<img width="512" height="512" alt="2" src="https://github.com/user-attachments/assets/ddd6d1b9-2477-4e42-9326-b047d92276d8" />
-<img width="512" height="512" alt="1" src="https://github.com/user-attachments/assets/ae2544f7-b855-4177-9865-87b91e6d5072" />
+<img width="15" height="15" alt="1" src="https://github.com/user-attachments/assets/ae2544f7-b855-4177-9865-87b91e6d5072" />  #47ade7<br>
+<img width="15" height="15" alt="2" src="https://github.com/user-attachments/assets/ddd6d1b9-2477-4e42-9326-b047d92276d8" />  #5f42b5<br>
+<img width="15" height="15" alt="3" src="https://github.com/user-attachments/assets/4eeb64d5-b689-44e8-ac35-128bd31ab2db" />  #333592
