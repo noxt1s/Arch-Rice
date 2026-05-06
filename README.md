@@ -6,7 +6,7 @@ Repository containing dotfiles I developed from scratch for Arch Linux, as well 
 
 ## 🌸 Kawaii-Themed Rice
 This rice is inspired by a cute, pink aesthetic, with kittens and stars. The Japanese term <i>kawaii</i> (可愛い) refers to things that are charming, adorable, and cute.
-You can download the dotfiles for this rice [here](https://github.com/noxt1s/Linux-Rice/tree/main/Kawaii-Themed%20Rice).<br>
+You can download the dotfiles for this rice [here](https://github.com/noxt1s/Linux-Rice/tree/main/Kawaii-Themed-Rice).<br>
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4067117c-ba4f-413d-9e1b-f7304532eefe" />
 
@@ -18,7 +18,7 @@ You can download the dotfiles for this rice [here](https://github.com/noxt1s/Lin
 ---
 ## 🌐 SEL-Themed Rice
 This rice is inspired by the anime "Serial Experiments Lain", with its retrofuturistic aesthetic.
-You can download the dotfiles for this rice [here](https://github.com/noxt1s/Linux-Rice/tree/main/Lain-Themed%20Rice).<br>
+You can download the dotfiles for this rice [here](https://github.com/noxt1s/Linux-Rice/tree/main/Lain-Themed-Rice).<br>
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cb0b21b5-6b62-4ba8-aeae-936d4b164a2a" />
 
