@@ -2,20 +2,20 @@
     font: "Maple Mono Italic 11.5";
 
     fg-main-color: #ffffff;
-    fg-alt-color: #c0c0d4cc;            /* "Search Apps" text color */
+    fg-alt-color: #c0d2f6;              /* "Search Apps" text color */
 
-    bg-main-color: #00000080;
-    bg-alt-color: #00000045;
+    bg-main-color: #00000086;
+    bg-alt-color: #00000050;
 
-    fg-highlight-color: #35b69d;
-    bg-highlight-color: #162645bb;
+    fg-highlight-color: #47ade7;
+    bg-highlight-color: #33359281;
 
     content-spacing: 13px;                /* Spacing between names and icons */
     content-padding: 8px;
     content-margin: 1px;
 
     window-border: 2px solid;
-    window-border-color: #196052;
+    window-border-color: #5f42b5;
     window-padding: 8px;
 
     bd-radius: 15px;                      /* Border radius */
@@ -25,7 +25,7 @@
 configuration {
     location: 1;                          /* On-screen location */
     mode: "drun";                         /* Display mode */
-    display-drun: " ";                   /* Search icon */
+    display-drun: "";                    /* Search icon */
     show-icons: true;
 }
 
