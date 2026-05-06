@@ -15,6 +15,7 @@ You can download the dotfiles for this rice [here](https://github.com/noxt1s/Lin
 <img width="15" height="15" alt="2" src="https://github.com/user-attachments/assets/90da30a6-b870-4ab0-87a5-caf8420ea0af" />  #c75583<br>
 <img width="15" height="15" alt="3" src="https://github.com/user-attachments/assets/660073ba-3f23-4454-8325-af367d4f2517" />  #770e43
 
+---
 ## 🌐 SEL-Themed Rice
 This rice is inspired by the anime "Serial Experiments Lain", with its retrofuturistic aesthetic.
 You can download the dotfiles for this rice [here](https://github.com/noxt1s/Linux-Rice/tree/main/Lain-Themed%20Rice).<br>
