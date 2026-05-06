@@ -8,16 +8,16 @@
 /* Bar background */
 window#waybar {
     color: #ffffff;
-    border-radius: 0 0 10px 10px;
-    background-color: rgba(0, 0, 0, 0.4)
+    border-radius: 0 0 12px 12px;
+    background-color: rgba(16, 12, 28, 0.4)
 }
 
 /* Module tooltips */
 tooltip {
     font-size: 15px;
     border-width: 2px;
-    border-color: #196052;
-    background-color: rgba(0, 0, 0, 0.5)
+    border-color: #5f42b5;
+    background-color: rgba(16, 12, 28, 0.55)
 }
 
 /* ------------------------ Left modules ------------------------ */
@@ -40,7 +40,7 @@ tooltip {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin-left: 10px;
+    margin-left: 8px;
     margin-right: 10px;
     padding: 0 25px
 }
@@ -49,8 +49,9 @@ tooltip {
 #workspaces button {
     color: #c0c0d4;
     font-size: 23px;
+    border: none;
     box-shadow: none;
-    text-shadow: 0 0 5px #00ffbf
+    text-shadow: 0 0 5px #d1bfd9
 }
 
 #workspaces button.active {
@@ -75,7 +76,7 @@ tooltip {
 /* Volume mixer */
 #pulseaudio {
     font-size: 34px;
-    margin-right: 9px;
+    margin-right: 8px;
 }
 
 #pulseaudio:hover {

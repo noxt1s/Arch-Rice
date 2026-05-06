@@ -37,17 +37,17 @@
     // -------------------------------- Center modules --------------------------------
 
     "clock": {
-        "format": "• {:%H:%M} •",                                           // 24-hour clock
-        "format-alt": "• {:%A, %B %d} •",                                   // Day of the week
+        "format": "✦ {:%H:%M} ✦",                                           // 24-hour clock
+        "format-alt": "✦ {:%A, %B %d} ✦",                                   // Day of the week
         "on-click-right": "play -q ~/.local/share/sounds/present-time.mp3", // Command to execute when right-clicking
         "tooltip-format": "{calendar}",
         "calendar": {
             "mode": "month",
             "format": {
                 "months": "<span color='#ffffff'><b><i>{}</i></b></span>", // Month format
-                "days": "<span color='#c0c0d4'>{}</span>",                 // Day format
-                "weekdays": "<span color='#35b69d'><b>{}</b></span>",      // Weekday format
-                "today": "<span color='#35b69d'><b>{}</b></span>"          // Today format
+                "days": "<span color='#c0d2f6'>{}</span>",                 // Day format
+                "weekdays": "<span color='#47cce7'><b>{}</b></span>",      // Weekday format
+                "today": "<span color='#47cce7'><b>{}</b></span>"          // Today format
             }
         },
         "actions": {
@@ -64,7 +64,7 @@
         "format-muted": "󰝟",
         "format-bluetooth": "󰥰",
         "format-icons": ["", "", ""], // Volume levels icons
-        "tooltip-format": "{icon}  <b><i>Volume</i>:</b> <span color='#c0c0d4'>{volume}%</span>",
+        "tooltip-format": "{icon}  <b><i>Volume</i>:</b> <span color='#c0d2f6'>{volume}%</span>",
         "on-click": "pavucontrol",       // Audio manager tool
         "max-volume": 100,               // Maximum volume in percentage
         "scroll-step": 1.5               // Scroll speed when changing volume
@@ -73,9 +73,9 @@
     "network": {
         "format-ethernet": "󰈀",
         "format-wifi": "{icon}",
-        "format-disconnected": "󰤮ㅤNo Network",
+        "format-disconnected": "󰤮",
         "format-icons": ["󰤟", "󰤢", "󰤥"], // Wifi strength icons
-        "tooltip-format": "  <b><i>Network</i>:</b> <span color='#c0c0d4'>{essid}</span>\n󰈀  <b><i>Interface</i>:</b> <span color='#c0c0d4'>{ifname}</span>\n  <b><i>Download</i>:</b> <span color='#c0c0d4'>{bandwidthDownBytes}</span>\n  <b><i>Upload</i>:</b> <span color='#c0c0d4'>{bandwidthUpBytes}</span>\n󰩟  <b><i>IP</i>:</b> <span color='#c0c0d4'>{ipaddr}</span>",
+        "tooltip-format": "  <b><i>Network</i>:</b> <span color='#c0d2f6'>{essid}</span>\n󰈀  <b><i>Interface</i>:</b> <span color='#c0d2f6'>{ifname}</span>\n  <b><i>Download</i>:</b> <span color='#c0d2f6'>{bandwidthDownBytes}</span>\n  <b><i>Upload</i>:</b> <span color='#c0d2f6'>{bandwidthUpBytes}</span>\n󰩟  <b><i>IP</i>:</b> <span color='#c0d2f6'>{ipaddr}</span>",
         "tooltip-format-disconnected": "Disconnected",
         "interval": 10 // Time to sync
     },
@@ -105,9 +105,9 @@
         "format-plugged": "󰂄",
         "format-charging": "󰂄",
         "format-icons": ["󱟩", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󱈑"], // Battery states icons
-        "tooltip-format": "󱐋  <b><i>Capacity</i>:</b> <span color='#c0c0d4'>{capacity}%</span>\n  <b><i>Time</i>:</b> <span color='#c0c0d4'>{time}</span>",
-        "tooltip-format-plugged": "󱐋  <b><i>Capacity</i>:</b> <span color='#c0c0d4'>{capacity}%</span> (<span color='#00e636'></span>)\n  <b><i>Time</i>:</b> <span color='#c0c0d4'>Fully charged!</span>",
-        "tooltip-format-charging": "󱐋  <b><i>Capacity</i>:</b> <span color='#c0c0d4'>{capacity}%</span> (<span color='#ffe600'>󱐋</span>)\n  <b><i>Time to 100%</i>:</b> <span color='#c0c0d4'>{time}</span>",
+        "tooltip-format": "󱐋  <b><i>Capacity</i>:</b> <span color='#c0d2f6'>{capacity}%</span>\n  <b><i>Time</i>:</b> <span color='#c0d2f6'>{time}</span>",
+        "tooltip-format-plugged": "󱐋  <b><i>Capacity</i>:</b> <span color='#c0d2f6'>{capacity}%</span> (<span color='#00e636'></span>)\n  <b><i>Time</i>:</b> <span color='#c0d2f6'>Fully charged!</span>",
+        "tooltip-format-charging": "󱐋  <b><i>Capacity</i>:</b> <span color='#c0d2f6'>{capacity}%</span> (<span color='#ffe600'>󱐋</span>)\n  <b><i>Time to 100%</i>:</b> <span color='#c0d2f6'>{time}</span>",
         "states": { // Defining battery states
             "good": 100,
             "warning": 50,
@@ -118,6 +118,6 @@
     "custom/poweroff": {
         "format": "⏻",
         "tooltip": false,
-        "on-click": "pgrep wlogout >/dev/null 2>&1 && killall wlogout || wlogout" // Wayland logout menu
+        "on-click": "pgrep wlogout -b 4 >/dev/null 2>&1 && killall wlogout || wlogout -b 4" // Wayland logout menu
     }
 }
