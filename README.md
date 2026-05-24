@@ -1,5 +1,5 @@
 # Ricing Arch Linux • By Noctis
-Repository containing dotfiles I developed from scratch for Arch Linux, as well as its automatic installation script (it's still in BETA !!!).
+Repository containing dotfiles I developed from scratch for Arch Linux, as well as its automatic installation script (still in beta!).
 
 ---
 # Rice Showcase
