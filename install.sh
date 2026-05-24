@@ -14,7 +14,7 @@ redCode="\x1B[31m"    # Error output color
 boldCode="\x1B[1m"
 resetCode="\x1B[0m"
 
-printf "${mainColor}${boldCode}Rice to be installed:${resetCode}\n${mainColor}1)${resetCode} Kawaii Theme\n${mainColor}2)${resetCode} Lain Theme\n${mainColor}3)${resetCode} " && read option
+printf "${mainColor}${boldCode}Rice to be installed:${resetCode}\n${mainColor}1)${resetCode} Kawaii Theme\n${mainColor}2)${resetCode} Lain Theme\n${mainColor}➤${resetCode}  " && read option
 
 # Defining the chosen rice
 case "$option" in
@@ -53,13 +53,11 @@ printf "\n${mainColor}▶ Installing $riceRoot...${resetCode}"
 # Creating necessary directories
 for dir in \
     ~/.local/share/fonts \
+    ~/.local/share/icons \
     ~/.local/share/sounds \
-    ~/.config/hypr \
-    ~/.config/waybar \
     ~/.config/kitty \
     ~/.config/fastfetch \
     ~/.config/rofi \
-    ~/.config/wlogout \
     ~/.config/Code/User \
     ~/.config/Vencord/themes \
     ~/Pictures/Wallpapers
@@ -70,9 +68,8 @@ done
 # Installing system font
 if [[ -f "$mainFont" ]]; then
     unzip -o "$mainFont" -d "${mainFont%.zip}"
-    mv "${mainFont%.zip}" ~/.local/share/fonts
+    mv "${mainFont%.zip}" ~/.local/share/fonts && successMsg "Font file “$mainFont” installed successfully."
     fc-cache -f -v
-    successMsg "Font file “$mainFont” installed successfully."
 else
     errorMsg "Font file “$mainFont” not found."
 fi
@@ -80,19 +77,22 @@ fi
 # Installing wallpaper
 [[ -f "$wallpaper" ]] && mv "$wallpaper" ~/Pictures/Wallpapers || errorMsg "Wallpaper “$wallpaper” not found."
 
+# Installing custom icons
+[[ -f "$customIcons" ]] && tar -xf "$customIcons" -C ~/.local/share/icons || errorMsg "Icons “$customIcons” not found."
+
 ###################
 #                 #
 #  Applying Rice  #
 #                 #
 ###################
 
-applyRice "$hyprRice"/* ~/.config/hypr            # Hyprland
-applyRice "$waybarRice"/* ~/.config/waybar        # Waybar
+applyRice "$hyprRice" ~/.config                   # Hyprland
+applyRice "$waybarRice" ~/.config                 # Waybar
 applyRice "$kittyRice" ~/.config/kitty            # Kitty
 applyRice "$fastfetchRice" ~/.config/fastfetch    # Fastfetch
 applyRice "$fastfetchLogo" ~/.config/fastfetch
 applyRice "$rofiRice" ~/.config/rofi              # Rofi
-applyRice "$wlogoutRice"/* ~/.config/wlogout      # Wlogout
+applyRice "$wlogoutRice" ~/.config                # Wlogout
 applyRice "$vscodeRice" ~/.config/Code/User       # VSCode
 applyRice "$discordRice" ~/.config/Vencord/themes # Vencord
 
